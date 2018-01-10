@@ -47,7 +47,7 @@ namespace AteliwareExam.Controllers
                     //Checking the response is successful or not which is sent using HttpClient  
                     if (Res.IsSuccessStatusCode)
                     {
-                        //Storing the response details recieved from web api   
+                        //Storing the response details retrieved from web api   
                         var Response = Res.Content.ReadAsStringAsync().Result;
 
                     //Deserializing the response recieved from web api and storing into the Employee list  
@@ -58,7 +58,7 @@ namespace AteliwareExam.Controllers
                         repoList.Add(gitRepo.items.ElementAt(i));
                     }
                     }
-                    //returning the employee list to view  
+                    //returning the repo list to view  
                     return repoList;
                 }
             }
